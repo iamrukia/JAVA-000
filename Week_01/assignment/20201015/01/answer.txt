@@ -1,0 +1,144 @@
+public class Hello {
+    public static void main(String[] args) {
+        int a = 0;
+        long b = 10;
+        double c = 3.3;
+
+        //加法
+        long d = a + b;
+
+        //减法
+        int e = (int) (a - b);
+
+        //乘法
+        byte f = 1;
+        long g = f * b;
+
+        //除法
+        double h = b / c;
+
+
+        //if
+        int i = 0;
+        if (a + b * c - d > 0) {
+            i = 1;
+        }
+
+        //for
+        int k = 0;
+        for (int j = 0; j < 5; j++) {
+            k = k + j;
+        }
+
+    }
+}
+===============================
+
+
+
+
+PS D:\IDEAproject\geektime_java_camp\JAVA-000\Week_01\assignment\20201015\01\out\production\SimpleCalculationDemo> javap -c .\Hello.class
+Compiled from "Hello.java"
+public class Hello {
+  public Hello();
+    //Object的初始化函数，作为父类被调用
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+
+  public static void main(java.lang.String[]);
+    //main方法
+    Code:
+       0: iconst_0                          //int常量0
+       1: istore_1                          //0被赋值到int变量 a， 参考上面局部变量表slot 1
+
+       2: ldc2_w        #2                  // long 10l - push long or double from run-time constant pool 
+                                            //从常量池 2中取10L
+       5: lstore_2                          //10L 被赋值给long变量 b, 槽位2
+
+
+
+       6: ldc2_w        #4                  // double 3.3d 从常量池4号取double 3.3d
+       9: dstore        4                   //3.3d被赋值给double变量c，位于局部变量表槽位4
+                                            //因为上一个long的局部变量占2字节，所以槽位从2跳到4
+
+
+        //开始加法 long d = a + b;
+      11: iload_1                           //从局部变量表slot 1中取出int 类型 a (a=0)                   
+      12: i2l                               //int转long (因为要和long类型的做加法)
+      13: lload_2                           //从局部变量表slot 2中取出long 类型 b (b=10L)
+      14: ladd                              //加法操作
+      15: lstore        6                   //加法运算的结果long类型存到局部变量表slot 6 (不是5 因为slot4的double类型占2个字节)
+      
+        //开始减法 int e = (int) (a - b);
+      17: iload_1
+      18: i2l                               //减法的两个操作数都需要是同类型，所以这里把int转为long
+      19: lload_2
+      20: lsub                              // 执行减法
+      21: l2i                               // 对减法结果进行显示类型转换 long -> int
+      22: istore        8                   // 对转换过后的int类型值赋给int变量 e
+
+
+       //开始乘法         byte f = 1;
+       //                long g = f * b;
+      24: iconst_1                          //int 常量 1
+      25: istore        9                   //虽然是byte类型，但在字节码里仍保存为int类型 局部变量表slot 9
+      27: iload         9
+      29: i2l
+      30: lload_2
+      31: lmul                              //执行乘法
+      32: lstore        10                  //保存乘法结果到long类型的局部变量表中 slot 10    g
+
+
+        //开始除法         double h = b / c;
+      34: lload_2
+      35: l2d                               //这里需要转换long到double
+      36: dload         4
+      38: ddiv                              //执行除法        
+      39: dstore        12                  //保存除法结果到double类型的局部变量表中 slot 12 h
+
+
+      // if语句                int i = 0;
+      //   if (a + b * c - d > 0) {
+      //      i = 1;
+      //   }
+      41: iconst_0
+      42: istore        14                 // int i = 0;
+      44: iload_1                          // 加载 a
+      45: i2d
+      46: lload_2                          // 加载 b
+      47: l2d                              
+      48: dload         4                  // 加载 c
+      50: dmul                             // 执行b * c
+      51: dadd                             // 执行 a + 上一步结果 (这种是 操作数1 操作数2 操作符) 后置的形式
+      52: lload         6                  // 加载 d
+      54: l2d
+      55: dsub                             // 执行 上面的值 - d
+      56: dconst_0                         // double 常量0 if条件里 > 右侧的
+      57: dcmpl                            // 比较 value1 value2(0),根据实际值返回-1(value1小),0,1(value1大)
+      58: ifle          64                 // 根据上面dcmpl的值判断 当小于等于0时 判断成功 
+                                           // 这里dcmpl的结果是1，所以失败跳64行
+      61: iconst_1
+      62: istore        14
+
+
+      // for语句
+      64: iconst_0
+      65: istore        15
+      67: iconst_0
+      68: istore        16
+      70: iload         16
+      72: iconst_5
+      73: if_icmpge     89                //和5比较,失败直接跳出循环到89行
+      76: iload         15
+      78: iload         16
+      80: iadd
+      81: istore        15
+      83: iinc          16, 1             //局部变量slot 16 (j),自增1
+      86: goto          70                //循环体结束跳到循环开始
+      89: return
+}
+
+==================================
