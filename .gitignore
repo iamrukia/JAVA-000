@@ -153,3 +153,10 @@ Week_03/nio02/target/classes/io/github/kimmking/gateway/outbound/httpclient4/Nam
 Week_03/nio02/target/classes/io/github/kimmking/gateway/outbound/netty4/NettyHttpClientOutboundHandler.class
 Week_03/nio02/target/classes/io/github/kimmking/gateway/outbound/okhttp/OkhttpOutboundHandler.class
 Week_03/nio02/target/classes/io/github/kimmking/gateway/router/HttpEndpointRouter.class
+Week_04/conc/pom.xml
+Week_04/conc/.idea/.gitignore
+Week_04/conc/.idea/compiler.xml
+Week_04/conc/.idea/jarRepositories.xml
+Week_04/conc/.idea/misc.xml
+Week_04/conc/.idea/uiDesigner.xml
+Week_04/conc/.idea/vcs.xml
