@@ -1,7 +1,8 @@
-###学习笔记
+### 学习笔记
 
+##### 第9课
 
-####作业1
+#### 作业1
 
 实现简单的基于Java的AOP
 
@@ -21,7 +22,7 @@
 
 
 
-####作业2
+#### 作业2
 实现Spring Bean的装配，越多越好 
 
 在02-bean-load-demo里
@@ -45,12 +46,15 @@
 
 
 
+##### 第10课
+
+#### 作业3 基于Student/Klass/School实现自动配置和Starter 
 
 
-
-
-
-
+#### 作业6 研究一下JDBC接口和数据库连接池，掌握他们的设计和用法：
+ - 使用jdbc原生接口实现数据库增删改查
+ - 使用事务，PrepareStatement方式，批处理方式，改进上述操作
+ - 配置Hikari连接池，改进上述操作。 
 
 
 use below for instrument sample
