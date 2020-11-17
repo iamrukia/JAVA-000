@@ -41,6 +41,7 @@
  - Xml: 基于XML的实现
     - package: xml
     - Bean Class: Duck
+    - Main Class: XmlDemo
     - xml file: duckBean.xml
     - xml文件这里非常简单，只有`<bean id="duck" class="xml.Duck"></bean>`
 
