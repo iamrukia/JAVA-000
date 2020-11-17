@@ -160,3 +160,12 @@ Week_04/conc/.idea/jarRepositories.xml
 Week_04/conc/.idea/misc.xml
 Week_04/conc/.idea/uiDesigner.xml
 Week_04/conc/.idea/vcs.xml
+Week_05/01-simple-aop/.idea/.gitignore
+Week_05/01-simple-aop/.idea/compiler.xml
+Week_05/01-simple-aop/.idea/jarRepositories.xml
+Week_05/01-simple-aop/.idea/misc.xml
+Week_05/01-simple-aop/.idea/vcs.xml
+Week_05/01-simple-aop/target/classes/demo/Car.class
+Week_05/01-simple-aop/target/classes/demo/Demo.class
+Week_05/01-simple-aop/target/classes/demo/ICar.class
+Week_05/01-simple-aop/target/classes/demo/TimingDynamicInvocationHandler.class
