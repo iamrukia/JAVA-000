@@ -169,3 +169,17 @@ Week_05/01-simple-aop/target/classes/demo/Car.class
 Week_05/01-simple-aop/target/classes/demo/Demo.class
 Week_05/01-simple-aop/target/classes/demo/ICar.class
 Week_05/01-simple-aop/target/classes/demo/TimingDynamicInvocationHandler.class
+Week_05/02-bean-load-demo/.idea/.gitignore
+Week_05/02-bean-load-demo/.idea/compiler.xml
+Week_05/02-bean-load-demo/.idea/jarRepositories.xml
+Week_05/02-bean-load-demo/.idea/misc.xml
+Week_05/02-bean-load-demo/.idea/vcs.xml
+Week_05/02-bean-load-demo/target/classes/AnnotationDemo1.class
+Week_05/02-bean-load-demo/target/classes/AnnotationDemo2.class
+Week_05/02-bean-load-demo/target/classes/application.properties
+Week_05/02-bean-load-demo/target/classes/duckBean.xml
+Week_05/02-bean-load-demo/target/classes/XmlDemo.class
+Week_05/02-bean-load-demo/target/classes/annotation/demo1/Dog.class
+Week_05/02-bean-load-demo/target/classes/annotation/demo2/AnimalConfig.class
+Week_05/02-bean-load-demo/target/classes/annotation/demo2/Cat.class
+Week_05/02-bean-load-demo/target/classes/xml/Duck.class

@@ -10,20 +10,38 @@
  - 具体的增强是在调用任意基于接口实现的对象中的 重载方法时，记录执行前后的系统时间并计算方法执行耗时
 
 控制台输出的结果如下
-`C:\Program Files\Java\jdk1.8.0_201\bin\java.exe demo.Demo
-===system time before invoke method run
-180665053215100
-car is running
-===system time before invoke method run
-180665053382700
-Executing run finished in 167600 nano seconds.
-
-Process finished with exit code 0`
-
+    `C:\Program Files\Java\jdk1.8.0_201\bin\java.exe demo.Demo`
+    `===system time before invoke method run`
+    `180665053215100`
+    `car is running`
+    `===system time before invoke method run`
+    `180665053382700`
+    `Executing run finished in 167600 nano seconds.`
+    `Process finished with exit code 0`
 
 
 
+####作业2
+实现Spring Bean的装配，越多越好 
 
+在02-bean-load-demo里
+ - Annotation: 基于 `@Component` 的实现：
+    - package: annotation.demo1
+    - Bean Class: Dog
+    - Main Class: AnnotationDemo1
+    - 运行显示无论是用Dog.class还是BeanName（"gou")，获取的都是同一个对象，是单例（默认）
+ - Annotation: 基于 `@Configuration` 的实现
+    - package: annotation.demo2
+    - Bean Class: Cat
+    - Config Class: AnimalConfig
+    - Main Class: AnnotationDemo2
+    - Property File： application.properties
+    - 其中还用了springboot中的 `@ConditionalOnProperty` 当在属性文件中注释掉cat行时，无法获取到cat实例
+ - Xml: 基于XML的实现
+    - package: xml
+    - Bean Class: Duck
+    - xml file: duckBean.xml
+    - xml文件这里非常简单，只有`<bean id="duck" class="xml.Duck"></bean>`
 
 
 
