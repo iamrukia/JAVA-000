@@ -70,7 +70,32 @@
  - 使用事务，PrepareStatement方式，批处理方式，改进上述操作
  - 配置Hikari连接池，改进上述操作。 
 
-jdbc等等写，之前倒是写过不少.....
+06-jdbc-demos里两个项目:
+ - h2demo 启动了一个h2 database用来测试连接用
+      `spring.datasource.url=jdbc:h2:mem:testdb`
+      `spring.datasource.driverClassName=org.h2.Driver`
+      `spring.datasource.username=sa`
+      `spring.datasource.password=password`
+      - 刚开始发现不开server模式暴露tcp是连接不上的，因为这个数据库在内存里, 跨jvm应该不好直接访问。
+      - 实际链接url用jdbc:h2:tcp://localhost:9090/mem:testdb
+      - 里面就一张表
+      ID, FIRST_NAME, LAST_NAME, CAREER
+      1,Aliko,Dangote,Billionaire Industrialist
+      2,Bill,Gates,Billionaire Tech Entrepreneur
+      3,Folrunsho,Alakija,Billionaire Oil Magnate
+ - jdbc_demo里是具体作业的实现
+      - simple_jdbc 就是裸jdbc直接操作
+      - multi_source_jdbc里可以简易的保留多个链接源的连接，并只保留一份（用url+username做key）
+      - connection_pool_jdbc 实现简单连接池
+      - hikari_pool 用hikariCP连接池
+      - 好像只写了查询:) 也没有用事务和批处理batch-后面加....
+
+
+
+
+
+
+
 
 
 
