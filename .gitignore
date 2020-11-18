@@ -183,3 +183,17 @@ Week_05/02-bean-load-demo/target/classes/annotation/demo1/Dog.class
 Week_05/02-bean-load-demo/target/classes/annotation/demo2/AnimalConfig.class
 Week_05/02-bean-load-demo/target/classes/annotation/demo2/Cat.class
 Week_05/02-bean-load-demo/target/classes/xml/Duck.class
+Week_05/06-jdbc-demos/jdbc_demo/.idea/.gitignore
+Week_05/06-jdbc-demos/jdbc_demo/.idea/compiler.xml
+Week_05/06-jdbc-demos/jdbc_demo/.idea/jarRepositories.xml
+Week_05/06-jdbc-demos/jdbc_demo/.idea/misc.xml
+Week_05/06-jdbc-demos/jdbc_demo/.idea/uiDesigner.xml
+Week_05/06-jdbc-demos/jdbc_demo/.idea/vcs.xml
+Week_05/06-jdbc-demos/jdbc_demo/target/classes/connection_pool_jdbc/ConnectionPool.class
+Week_05/06-jdbc-demos/jdbc_demo/target/classes/connection_pool_jdbc/ConnectionPoolDemo.class
+Week_05/06-jdbc-demos/jdbc_demo/target/classes/hikari_pool/HikariPool.class
+Week_05/06-jdbc-demos/jdbc_demo/target/classes/hikari_pool/HikariPoolDemo.class
+Week_05/06-jdbc-demos/jdbc_demo/target/classes/multi_source_jdbc/MultiSourceConnection.class
+Week_05/06-jdbc-demos/jdbc_demo/target/classes/multi_source_jdbc/MultiSourceDemo.class
+Week_05/06-jdbc-demos/jdbc_demo/target/classes/simple_jdbc/SimpleJdbcDemo.class
+Week_05/06-jdbc-demos/jdbc_demo/target/classes/util/StatementUtil.class
