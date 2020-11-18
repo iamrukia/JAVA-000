@@ -50,7 +50,20 @@
 ##### 第10课
 
 #### 作业3 基于Student/Klass/School实现自动配置和Starter 
-
+ - 在03-auto-config-and-start里
+    - customized.start项目实现了auto config starter
+    - demo里是测试，需要提前install 上一步打包好的jar包
+    -     <dependency>
+            <groupId>com.iamrukia</groupId>
+            <artifactId>starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+          </dependency>
+ - 核心是需要
+    - 自动配置类
+    - 属性类
+    - src/main/resources/META-INF 下的 spring.factories 包含
+    org.springframework.boot.autoconfigure.EnableAutoConfiguration=自动配置类全包路径
+ - 本例子半天没有完成，各种空指针。后来发现是需要在调用starter的环境里的application.properties写入之前预设属性。
 
 #### 作业6 研究一下JDBC接口和数据库连接池，掌握他们的设计和用法：
  - 使用jdbc原生接口实现数据库增删改查
