@@ -71,8 +71,11 @@
  - 配置Hikari连接池，改进上述操作。 
 
 
-use below for instrument sample
-D:\IDEAproject\geektime_java_camp\JAVA-000\Week_01\assignment\20201017\out\production\gc_demo\demo
 
 
+
+参考
 https://www.baeldung.com/spring-boot-custom-starter
+
+instrument sample for calculating 2d array size 
+D:\IDEAproject\geektime_java_camp\JAVA-000\Week_01\assignment\20201017\out\production\gc_demo\demo
