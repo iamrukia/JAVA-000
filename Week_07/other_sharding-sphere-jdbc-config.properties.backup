@@ -1,0 +1,22 @@
+# 设置数据源
+spring.shardingsphere.datasource.names=master,slave0,slave1
+spring.shardingsphere.datasource.common.type=com.alibaba.druid.pool.DruidDataSource
+spring.shardingsphere.datasource.common.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.shardingsphere.datasource.common.username=root
+spring.shardingsphere.datasource.common.password=
+# 配置 master
+spring.shardingsphere.datasource.master.url=jdbc:mysql://127.0.0.1:3306/db?useSSL=false&useUnicode=true&characterEncoding=utf-8
+# 配置 slave
+spring.shardingsphere.datasource.slave0.url=jdbc:mysql://127.0.0.1:3316/db?useSSL=false&useUnicode=true&characterEncoding=utf-8
+spring.shardingsphere.datasource.slave1.url=jdbc:mysql://127.0.0.1:3326/db?useSSL=false&useUnicode=true&characterEncoding=utf-8
+
+# ShardingSphere replica-query
+spring.shardingsphere.enabled=true
+spring.shardingsphere.rules.replica-query.data-sources.pr_ds.primary-data-source-name=master
+spring.shardingsphere.rules.replica-query.data-sources.pr_ds.replica-data-source-names=slave0,slave1
+spring.shardingsphere.rules.replica-query.data-sources.pr_ds.load-balancer-name=round-robin
+spring.shardingsphere.rules.replica-query.load-balancers.round-robin.type=ROUND_ROBIN
+spring.shardingsphere.rules.replica-query.load-balancers.round-robin.props.key=value
+
+# 输出 SQL
+spring.shardingsphere.props.sql.show=true
